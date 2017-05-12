@@ -18,7 +18,7 @@ function getQuote() {
 	  type: 'GET',
 	  dataType: 'json',
 	  cache: false,
-	  url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
+	  url: 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
 	  success: function(data){
 	  	quoteText = data.quoteText;
 	  	quoteAuthor = data.quoteAuthor;
