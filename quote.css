@@ -1,0 +1,29 @@
+body {
+	background-color: #6098f2;
+}
+
+.quote-box {
+	margin: 50px auto;
+	max-width: 60%;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.quoteAuthor {
+	font-style: italic;
+}
+
+#displayedQuote {
+	border: 2px solid black;
+	margin: 5px;
+	padding: 6px;
+	border-radius: 15px;
+	background-color: #dae0e8;
+	font-family: 'Lora', serif;
+}
+
+#tweet {
+	color: #0084b4;
+}
