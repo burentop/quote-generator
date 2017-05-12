@@ -1,5 +1,4 @@
 var quoteText = "";
-var quoteAuthor = "";
 
 $(document).ready(function() {
 	getQuote();
@@ -9,7 +8,7 @@ $(document).ready(function() {
 	});
 	$("#tweet").on("click", function(event) {
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + quoteText + " - " + quoteAuthor);
+		window.open("https://twitter.com/intent/tweet?text=" + quoteText);
 	});
 });
 
@@ -18,11 +17,10 @@ function getQuote() {
 	  type: 'GET',
 	  dataType: 'json',
 	  cache: false,
-	  url: 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
+	  url: 'https://api.icndb.com/jokes/random',
 	  success: function(data){
-	  	quoteText = data.quoteText;
-	  	quoteAuthor = data.quoteAuthor;
-	    $("#displayedQuote").html("<div class='quoteText'>" + quoteText + "</div><br>" + "<div class='quoteAuthor'>" + quoteAuthor + "</div>");
+	  	quoteText = data.value.joke;
+	    $("#displayedQuote").html("<div class='quoteText'>" + quoteText + "</div>");
 	  }
 	});
 }

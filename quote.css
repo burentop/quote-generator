@@ -11,10 +11,6 @@ body {
 	padding: 20px;
 }
 
-.quoteAuthor {
-	font-style: italic;
-}
-
 #displayedQuote {
 	border: 2px solid black;
 	margin: 5px;
